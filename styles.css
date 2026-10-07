@@ -1,15 +1,15 @@
 :root {
     color-scheme: light;
-    --background: #f3f6f9;
+    --background: #eef3f7;
     --surface: #ffffff;
     --surface-soft: #eaf1f8;
     --ink: #0b1728;
     --text: #233044;
     --muted: #617083;
-    --line: #d4dee9;
-    --blue: #0f66d0;
+    --line: #ccd8e5;
+    --blue: #145fb8;
     --cyan: #0e9fb2;
-    --deep: #071d36;
+    --deep: #071a2d;
     --shadow: 0 28px 80px rgba(7, 29, 54, 0.2);
     --soft-shadow: 0 14px 34px rgba(7, 29, 54, 0.08);
 }
@@ -27,7 +27,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: var(--text);
     background:
-        linear-gradient(180deg, #ffffff 0%, var(--background) 48%, #e9f0f7 100%);
+        linear-gradient(180deg, #f8fafc 0%, var(--background) 52%, #e6edf4 100%);
     line-height: 1.55;
 }
 
@@ -49,14 +49,14 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 20;
-    width: min(1180px, calc(100% - 40px));
+    width: min(1220px, calc(100% - 40px));
     min-height: 74px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 22px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(248, 250, 252, 0.92);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(217, 228, 239, 0.72);
 }
@@ -86,7 +86,7 @@ a:hover {
 
 main,
 .page {
-    width: min(1180px, calc(100% - 40px));
+    width: min(1220px, calc(100% - 40px));
     margin: 0 auto;
 }
 
@@ -95,21 +95,25 @@ main,
 }
 
 .page.narrow {
-    width: min(860px, calc(100% - 40px));
-}
-
-.topnav {
-    justify-content: space-between;
-    padding: 8px 0 28px;
+    width: min(920px, calc(100% - 40px));
 }
 
 .hero {
-    min-height: calc(100vh - 74px);
+    min-height: 0;
     display: grid;
-    grid-template-columns: minmax(0, 0.96fr) minmax(360px, 1.04fr);
+    grid-template-columns: minmax(0, 0.94fr) minmax(390px, 1.06fr);
     align-items: center;
-    gap: 56px;
-    padding: 52px 0 82px;
+    gap: 54px;
+    margin: 34px 0 72px;
+    padding: 56px;
+    color: #ffffff;
+    background:
+        linear-gradient(135deg, rgba(7, 26, 45, 0.98), rgba(11, 49, 86, 0.96) 48%, rgba(20, 95, 184, 0.86)),
+        var(--deep);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    box-shadow: 0 34px 90px rgba(7, 26, 45, 0.26);
+    overflow: hidden;
 }
 
 .hero-copy {
@@ -132,6 +136,10 @@ h3 {
     margin: 0;
     color: var(--ink);
     letter-spacing: 0;
+}
+
+.hero h1 {
+    color: #ffffff;
 }
 
 h1 {
@@ -162,6 +170,10 @@ p {
     line-height: 1.42;
 }
 
+.hero .lead {
+    color: #d8e6f4;
+}
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -181,14 +193,14 @@ p {
 
 .button.primary {
     color: #ffffff;
-    background: var(--blue);
-    box-shadow: 0 14px 28px rgba(15, 102, 208, 0.23);
+    background: #0e9fb2;
+    box-shadow: 0 14px 28px rgba(14, 159, 178, 0.23);
 }
 
 .button.secondary {
-    color: var(--deep);
-    background: #edf3f8;
-    border: 1px solid #cad9e8;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 .trust-row {
@@ -200,37 +212,65 @@ p {
 
 .trust-row div {
     padding: 14px;
-    background: rgba(255, 255, 255, 0.86);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 8px;
 }
 
 .trust-row dt {
-    color: var(--ink);
+    color: #ffffff;
     font-weight: 850;
 }
 
 .trust-row dd {
     margin: 2px 0 0;
-    color: var(--muted);
+    color: #b9c9d9;
     font-size: 14px;
 }
 
 .hero-visual {
     position: relative;
-    min-height: 690px;
+    min-height: 660px;
     isolation: isolate;
 }
 
 .hero-visual::before {
     content: "";
     position: absolute;
-    inset: 10% 0 7% 9%;
+    inset: 8% 0 8% 8%;
     z-index: -1;
-    border-radius: 24px;
+    border-radius: 18px;
     background:
-        linear-gradient(135deg, rgba(7, 29, 54, 0.96), rgba(15, 102, 208, 0.82));
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 240, 248, 0.88));
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.72),
+        0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.device-label {
+    position: absolute;
+    right: 24px;
+    top: 44px;
+    z-index: 5;
+    display: grid;
+    gap: 2px;
+    min-width: 182px;
+    padding: 14px 16px;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(204, 216, 229, 0.9);
+    border-radius: 8px;
+    box-shadow: var(--soft-shadow);
+}
+
+.device-label span {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.device-label strong {
+    font-size: 19px;
 }
 
 .phone-shot {
@@ -265,7 +305,7 @@ p {
 }
 
 .section {
-    padding: 86px 0 38px;
+    padding: 42px 0 44px;
 }
 
 .section-heading {
@@ -291,6 +331,7 @@ p {
     border: 1px solid var(--line);
     border-radius: 8px;
     box-shadow: var(--soft-shadow);
+    border-top: 4px solid var(--deep);
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
@@ -311,7 +352,9 @@ p {
 }
 
 .showcase {
-    padding: 78px 0;
+    padding: 72px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
 }
 
 .screenshot-strip {
@@ -353,7 +396,7 @@ p {
     align-items: center;
     margin: 26px 0 72px;
     padding: 34px;
-    border-radius: 8px;
+    border-radius: 14px;
 }
 
 .pro-band {
@@ -420,6 +463,13 @@ p {
     margin: 10px 0 18px;
 }
 
+.support-card .button.secondary,
+.content .button.secondary {
+    color: var(--deep);
+    background: #ffffff;
+    border-color: #cad9e8;
+}
+
 .content {
     padding: 34px;
     background: var(--surface);
@@ -474,7 +524,7 @@ p {
     .hero {
         grid-template-columns: 1fr;
         min-height: 0;
-        padding-top: 38px;
+        padding: 38px;
     }
 
     .hero-visual {
@@ -521,7 +571,9 @@ p {
 
     .hero {
         gap: 28px;
-        padding-bottom: 42px;
+        margin-top: 18px;
+        padding: 28px 18px;
+        border-radius: 12px;
     }
 
     .trust-row,
@@ -531,7 +583,7 @@ p {
     }
 
     .hero-visual {
-        min-height: 460px;
+        min-height: 475px;
     }
 
     .hero-visual::before {
@@ -545,6 +597,13 @@ p {
 
     .phone-main {
         width: 205px;
+    }
+
+    .device-label {
+        right: 8px;
+        top: 18px;
+        min-width: 148px;
+        padding: 10px 12px;
     }
 
     .phone-left {
